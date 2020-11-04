@@ -23,6 +23,7 @@ void Person::visit() {
 //    cout<< sizeof(building->kt) << endl;
 //}
 //error
+//！！！！！！注意visit都要在类外实现 否则会报错
 int main() {
     Person p;
     p.visit();
