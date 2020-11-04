@@ -1,0 +1,25 @@
+一、继承方式有三种
+    public
+    protected
+    private
+    比如基类
+    class Base{
+    public:
+        int a;
+    protected:
+        int b;
+    private:
+        int c;
+    }
+    public方式原样保留
+    protected方式都降为protected
+    private方式都降为private
+二、
+    私有成员被隐藏，仍被继承下来
+三、
+    同名变量or函数，默认用子类，父类可以加作用域调son.Base::age or son.Base::age();
+    Son::Base::age or Son::Base::age()//通过子类对象在父类作用域得到同名成员
+    多继承中父类有同名通过作用域区分
+四、
+    菱形继承（如动物、羊、驼、羊驼）会导致羊驼得到两个相同的属性如年龄，可以在继承动物之前加上关键字virtual变为虚继承，动物类也成了虚基类
+    羊和驼继承了vbptr(virtual base pointer) 它指向vbtable 根据此表映射到动物的这唯一一份年龄
